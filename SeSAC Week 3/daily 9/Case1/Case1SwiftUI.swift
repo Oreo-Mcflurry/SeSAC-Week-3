@@ -8,77 +8,77 @@
 import SwiftUI
 
 struct Case1SwiftUI: View {
-    var body: some View {
-		 NavigationStack {
-			 List {
-				 Section {
-					 NavigationLink {
+	var body: some View {
+		NavigationStack {
+			List {
+				Section {
+					NavigationLink {
 
-					 } label: {
-						 Image(systemName: "moon.fill")
-							 .foregroundStyle(.purple)
-						 Text("방해 금지 모드")
-						 Text("켬")
-							 .frame(maxWidth: .infinity, alignment: .trailing)
-							 .font(.caption)
-					 }
+					} label: {
+						Image(systemName: "moon.fill")
+							.foregroundStyle(.purple)
+						Text("방해 금지 모드")
+						Text("켬")
+							.frame(maxWidth: .infinity, alignment: .trailing)
+							.font(.caption)
+					}
 
-					 NavigationLink {
-						 
-					 } label: {
-							 Image(systemName: "star")
-							 .foregroundStyle(.yellow)
-							 Text("수면")
-					 }
+					NavigationLink {
 
-					 NavigationLink {
+					} label: {
+						Image(systemName: "star")
+							.foregroundStyle(.yellow)
+						Text("수면")
+					}
 
-					 } label: {
-						 Image(systemName: "iphone.gen3")
-							 .foregroundStyle(.green)
-							 .font(.title2)
-						 VStack(alignment: .leading) {
-							 Text("업무")
-							 Text("09:00 ~ 06:00")
-								 .font(.caption2)
-						 }
-					 }
+					NavigationLink {
 
-					 NavigationLink {
+					} label: {
+						Image(systemName: "iphone.gen3")
+							.foregroundStyle(.green)
+							.font(.title2)
+						VStack(alignment: .leading) {
+							Text("업무")
+							Text("09:00 ~ 06:00")
+								.font(.caption2)
+						}
+					}
 
-					 } label: {
-						 Image(systemName: "person.fill")
-							 .foregroundStyle(.blue)
-						 Text("개인 시간")
-						 Text("설정")
-							 .frame(maxWidth: .infinity, alignment: .trailing)
-							 .font(.caption)
-					 }
+					NavigationLink {
 
-				 } header: {
-					 Text("헤더부터")
-				 } footer: {
-					 Text("푸터까지 다 사랑스러워")
-				 }
+					} label: {
+						Image(systemName: "person.fill")
+							.foregroundStyle(.blue)
+						Text("개인 시간")
+						Text("설정")
+							.frame(maxWidth: .infinity, alignment: .trailing)
+							.font(.caption)
+					}
 
-				 Section {
-					 NavigationLink {
+				} header: {
+					Text("헤더부터")
+				} footer: {
+					Text("푸터까지 다 사랑스러워")
+				}
 
-					 } label: {
-						 Toggle(isOn: .constant(true)) {
-							 Text("모든 기기에서 공유")
-						 }
-					 }
-				 } footer: {
-					 Text("이 기기에서 집중 모드를 켜면 사용자의 다른 기기에서도 집중 모드가 켜집니다.")
-				 }
-			 }
-			 .navigationTitle("모드 설정")
-			 .navigationBarTitleDisplayMode(.inline)
-		 }
-    }
+				Section {
+					NavigationLink {
+
+					} label: {
+						Toggle(isOn: .constant(true)) {
+							Text("모든 기기에서 공유")
+						}
+					}
+				} footer: {
+					Text("이 기기에서 집중 모드를 켜면 사용자의 다른 기기에서도 집중 모드가 켜집니다.")
+				}
+			}
+			.navigationTitle("모드 설정")
+			.navigationBarTitleDisplayMode(.inline)
+		}
+	}
 }
 
 #Preview {
-    Case1SwiftUI()
+	Case1SwiftUI()
 }

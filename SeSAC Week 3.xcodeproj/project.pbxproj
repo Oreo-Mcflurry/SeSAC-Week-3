@@ -103,6 +103,7 @@
 		0BEBF88D2B4919AE00AE88AB /* daily 9 */ = {
 			isa = PBXGroup;
 			children = (
+				0BEBF8932B493D2100AE88AB /* Case2 */,
 				0BEBF8902B49373E00AE88AB /* Case1 */,
 			);
 			path = "daily 9";
@@ -115,6 +116,13 @@
 				0BEBF8912B49375200AE88AB /* Case1SwiftUI.swift */,
 			);
 			path = Case1;
+			sourceTree = "<group>";
+		};
+		0BEBF8932B493D2100AE88AB /* Case2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Case2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
