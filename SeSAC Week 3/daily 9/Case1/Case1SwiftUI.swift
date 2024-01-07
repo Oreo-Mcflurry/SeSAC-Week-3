@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+// 한동안 유킷만 하다보니까 스유 다 까먹은거 같아서 한동한 과제를 똑같은 뷰를 유킷/스유 두개씩 그리겠습니다. 한달전의 제가 더 스유를 잘하는거같아요...ㅋㅋㅋㅋ
 struct Case1SwiftUI: View {
 	var body: some View {
 		NavigationStack {

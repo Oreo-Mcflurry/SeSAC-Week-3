@@ -9,7 +9,8 @@ import UIKit
 
 class Case2TableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	@IBOutlet var titleLabel: UILabel!
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
@@ -20,4 +21,10 @@ class Case2TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+
+extension UITableViewController {
+	enum tableIdentifier: String {
+		case Case2Cell
+	}
 }

@@ -19,6 +19,12 @@
 		0BEBF88A2B47CE6300AE88AB /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF8892B47CE6300AE88AB /* TodoTableViewCell.swift */; };
 		0BEBF88F2B4919D600AE88AB /* Case1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF88E2B4919D600AE88AB /* Case1TableViewController.swift */; };
 		0BEBF8922B49375200AE88AB /* Case1SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF8912B49375200AE88AB /* Case1SwiftUI.swift */; };
+		0BEBF8952B493DF700AE88AB /* Case2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF8942B493DF700AE88AB /* Case2TableViewController.swift */; };
+		0BEBF8972B493E7700AE88AB /* Case2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF8962B493E7700AE88AB /* Case2TableViewCell.swift */; };
+		0BEBF89A2B4AB4F900AE88AB /* Case3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF8992B4AB4F800AE88AB /* Case3TableViewController.swift */; };
+		0BEBF89C2B4AC2CA00AE88AB /* Case3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF89B2B4AC2CA00AE88AB /* Case3TableViewCell.swift */; };
+		0BEBF89E2B4ACC8000AE88AB /* Case3SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF89D2B4ACC8000AE88AB /* Case3SwiftUI.swift */; };
+		0BEBF8A02B4AD24400AE88AB /* Case2SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF89F2B4AD24400AE88AB /* Case2SwiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		0BEBF8892B47CE6300AE88AB /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		0BEBF88E2B4919D600AE88AB /* Case1TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case1TableViewController.swift; sourceTree = "<group>"; };
 		0BEBF8912B49375200AE88AB /* Case1SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case1SwiftUI.swift; sourceTree = "<group>"; };
+		0BEBF8942B493DF700AE88AB /* Case2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2TableViewController.swift; sourceTree = "<group>"; };
+		0BEBF8962B493E7700AE88AB /* Case2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2TableViewCell.swift; sourceTree = "<group>"; };
+		0BEBF8992B4AB4F800AE88AB /* Case3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3TableViewController.swift; sourceTree = "<group>"; };
+		0BEBF89B2B4AC2CA00AE88AB /* Case3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3TableViewCell.swift; sourceTree = "<group>"; };
+		0BEBF89D2B4ACC8000AE88AB /* Case3SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3SwiftUI.swift; sourceTree = "<group>"; };
+		0BEBF89F2B4AD24400AE88AB /* Case2SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2SwiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,7 @@
 		0BEBF88D2B4919AE00AE88AB /* daily 9 */ = {
 			isa = PBXGroup;
 			children = (
+				0BEBF8982B4AB4E100AE88AB /* Case3 */,
 				0BEBF8932B493D2100AE88AB /* Case2 */,
 				0BEBF8902B49373E00AE88AB /* Case1 */,
 			);
@@ -121,8 +134,21 @@
 		0BEBF8932B493D2100AE88AB /* Case2 */ = {
 			isa = PBXGroup;
 			children = (
+				0BEBF8942B493DF700AE88AB /* Case2TableViewController.swift */,
+				0BEBF8962B493E7700AE88AB /* Case2TableViewCell.swift */,
+				0BEBF89F2B4AD24400AE88AB /* Case2SwiftUI.swift */,
 			);
 			path = Case2;
+			sourceTree = "<group>";
+		};
+		0BEBF8982B4AB4E100AE88AB /* Case3 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEBF8992B4AB4F800AE88AB /* Case3TableViewController.swift */,
+				0BEBF89B2B4AC2CA00AE88AB /* Case3TableViewCell.swift */,
+				0BEBF89D2B4ACC8000AE88AB /* Case3SwiftUI.swift */,
+			);
+			path = Case3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,15 +222,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEBF8972B493E7700AE88AB /* Case2TableViewCell.swift in Sources */,
 				0BEBF88A2B47CE6300AE88AB /* TodoTableViewCell.swift in Sources */,
 				0BEBF8882B47CE4A00AE88AB /* TodoTableTableViewController.swift in Sources */,
+				0BEBF89C2B4AC2CA00AE88AB /* Case3TableViewCell.swift in Sources */,
 				0BEBF8842B47CA8500AE88AB /* TestTableTableViewController.swift in Sources */,
+				0BEBF89E2B4ACC8000AE88AB /* Case3SwiftUI.swift in Sources */,
 				0BEBF8722B47B7B000AE88AB /* ViewController.swift in Sources */,
 				0BEBF8862B47CD2C00AE88AB /* TableCellViewControllerTableViewCell.swift in Sources */,
 				0BEBF88F2B4919D600AE88AB /* Case1TableViewController.swift in Sources */,
+				0BEBF8A02B4AD24400AE88AB /* Case2SwiftUI.swift in Sources */,
 				0BEBF86E2B47B7B000AE88AB /* AppDelegate.swift in Sources */,
 				0BEBF8702B47B7B000AE88AB /* SceneDelegate.swift in Sources */,
+				0BEBF8952B493DF700AE88AB /* Case2TableViewController.swift in Sources */,
 				0BEBF8922B49375200AE88AB /* Case1SwiftUI.swift in Sources */,
+				0BEBF89A2B4AB4F900AE88AB /* Case3TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

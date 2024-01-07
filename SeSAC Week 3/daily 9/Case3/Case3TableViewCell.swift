@@ -9,15 +9,25 @@ import UIKit
 
 class Case3TableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+	@IBOutlet var checkButton: UIButton!
+	@IBOutlet var titleLabel: UILabel!
+	@IBOutlet var starButton: UIButton!
+	
+	override func awakeFromNib() {
+		super.awakeFromNib()
+	}
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+	 }
+	@IBAction func tapButton(_ sender: UIButton) {
+		if sender == checkButton {
+			let image = sender.currentImage == UIImage(systemName: "checkmark.square") ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "checkmark.square")
+			sender.setImage(image, for: .normal)
+		} else {
+			let image = sender.currentImage == UIImage(systemName: "star") ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+			sender.setImage(image, for: .normal)
+		}
+	}
+	
 }

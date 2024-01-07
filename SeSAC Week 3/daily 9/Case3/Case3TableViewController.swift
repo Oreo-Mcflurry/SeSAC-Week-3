@@ -9,81 +9,57 @@ import UIKit
 
 class Case3TableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	@IBOutlet var textField: UITextField!
+	@IBOutlet var addButton: UIButton!
+	var shopping: [ShoppingModel] = [
+		ShoppingModel(isChecked: true, text: "그립톡 구매하기", isStared: true)
+	]
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		addButton.layer.cornerRadius = 10
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+	}
 
-    // MARK: - Table view data source
+	override func numberOfSections(in tableView: UITableView) -> Int {
+		// #warning Incomplete implementation, return the number of sections
+		return 1
+	}
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		// #warning Incomplete implementation, return the number of rows
+		return shopping.count
+	}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+	// Cell에 선언된 버튼을 눌렀을때 컨트롤러에 있는 데이터에 어떻게 접근하는지 감이 안와요.
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Case3Cell", for: indexPath) as! Case3TableViewCell?
+		guard let cell else { return UITableViewCell() }
+		cell.backgroundColor = .systemGray6
+		cell.titleLabel.text = shopping[indexPath.row].text
+		cell.checkButton.setImage(shopping[indexPath.row].isChecked ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "checkmark.square"), for: .normal)
+		cell.checkButton.tintColor = .black
+		cell.starButton.setImage(shopping[indexPath.row].isStared ? UIImage(systemName: "star.fill") : UIImage(systemName: "star"), for: .normal)
+		cell.starButton.tintColor = .black
+		return cell
+	}
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			shopping.remove(at: indexPath.row)
+			tableView.reloadData()
+		}
+	}
 
-        // Configure the cell...
+	@IBAction func tapAddButton(_ sender: UIButton) {
+		shopping.append(ShoppingModel(isChecked: false, text: textField.text!, isStared: false))
+		tableView.reloadData()
+	}
 
-        return cell
-    }
-    */
+}
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+struct ShoppingModel: Hashable {
+	var isChecked: Bool
+	var text: String
+	var isStared: Bool
 }
