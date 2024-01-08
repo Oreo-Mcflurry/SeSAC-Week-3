@@ -14,12 +14,8 @@ struct TravelSwiftUI: View {
 		NavigationStack {
 			ScrollView {
 				headerLine
-				ForEach(magazines, id: \.self) { item in
-					TravelCell(magazine: item)
-				}
-
+				travelView
 			}
-
 		}
 		.navigationTitle("SeSAC TRAVEL")
 		.navigationBarTitleDisplayMode(.inline)
@@ -30,6 +26,12 @@ struct TravelSwiftUI: View {
 			.frame(height: 1)
 			.foregroundStyle(.gray)
 			.opacity(0.5)
+	}
+
+	private var travelView: some View {
+		ForEach(magazines, id: \.self) { item in
+			TravelCell(magazine: item)
+		}
 	}
 }
 
@@ -51,7 +53,7 @@ struct TravelCell: View {
 			Text(magazine.title)
 				.font(.title)
 				.bold()
-				.padding(.top, 8)
+				.padding(.vertical, 5)
 
 			Text(magazine.subtitle)
 				.font(.callout)
