@@ -11,6 +11,7 @@
 		0B8CF8D92B4C0D5700460ED6 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF8D82B4C0D5700460ED6 /* TravelTableViewController.swift */; };
 		0B8CF8DB2B4C0D9E00460ED6 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF8DA2B4C0D9E00460ED6 /* MagazineInfo.swift */; };
 		0B8CF8DE2B4C0F0C00460ED6 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF8DD2B4C0F0C00460ED6 /* TravelTableViewCell.swift */; };
+		0B8CF8E02B4C17B200460ED6 /* TravelSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF8DF2B4C17B200460ED6 /* TravelSwiftUI.swift */; };
 		0BEBF86E2B47B7B000AE88AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF86D2B47B7B000AE88AB /* AppDelegate.swift */; };
 		0BEBF8702B47B7B000AE88AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF86F2B47B7B000AE88AB /* SceneDelegate.swift */; };
 		0BEBF8722B47B7B000AE88AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF8712B47B7B000AE88AB /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		0B8CF8D82B4C0D5700460ED6 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		0B8CF8DA2B4C0D9E00460ED6 /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		0B8CF8DD2B4C0F0C00460ED6 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		0B8CF8DF2B4C17B200460ED6 /* TravelSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelSwiftUI.swift; sourceTree = "<group>"; };
 		0BEBF86A2B47B7B000AE88AB /* SeSAC Week 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSAC Week 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEBF86D2B47B7B000AE88AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEBF86F2B47B7B000AE88AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				0B8CF8DA2B4C0D9E00460ED6 /* MagazineInfo.swift */,
 				0B8CF8D82B4C0D5700460ED6 /* TravelTableViewController.swift */,
 				0B8CF8DD2B4C0F0C00460ED6 /* TravelTableViewCell.swift */,
+				0B8CF8DF2B4C17B200460ED6 /* TravelSwiftUI.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				0B8CF8DB2B4C0D9E00460ED6 /* MagazineInfo.swift in Sources */,
 				0BEBF8AE2B4AD8E200AE88AB /* P2TableViewController.swift in Sources */,
 				0BEBF86E2B47B7B000AE88AB /* AppDelegate.swift in Sources */,
+				0B8CF8E02B4C17B200460ED6 /* TravelSwiftUI.swift in Sources */,
 				0BEBF8702B47B7B000AE88AB /* SceneDelegate.swift in Sources */,
 				0BEBF8952B493DF700AE88AB /* Case2TableViewController.swift in Sources */,
 				0BEBF8922B49375200AE88AB /* Case1SwiftUI.swift in Sources */,

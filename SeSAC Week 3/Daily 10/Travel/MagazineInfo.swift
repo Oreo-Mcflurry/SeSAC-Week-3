@@ -27,7 +27,7 @@ struct MagazineInfo {
     ]
 }
 
-struct Magazine {
+struct Magazine: Hashable {
 	var title: String
 	var subtitle: String
 	var photo_image: String
