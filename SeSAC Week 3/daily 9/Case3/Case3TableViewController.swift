@@ -37,10 +37,15 @@ class Case3TableViewController: UITableViewController {
 		guard let cell else { return UITableViewCell() }
 		cell.backgroundColor = .systemGray6
 		cell.titleLabel.text = shopping[indexPath.row].text
-		cell.checkButton.setImage(shopping[indexPath.row].isChecked ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "checkmark.square"), for: .normal)
+		cell.checkButton.setImage(UIImage(systemName: shopping[indexPath.row].isChecked ? "checkmark.square.fill" : "checkmark.square"), for: .normal)
 		cell.checkButton.tintColor = .black
-		cell.starButton.setImage(shopping[indexPath.row].isStared ? UIImage(systemName: "star.fill") : UIImage(systemName: "star"), for: .normal)
+		cell.starButton.setImage(UIImage(systemName: shopping[indexPath.row].isStared ? "star.fill" : "star"), for: .normal)
 		cell.starButton.tintColor = .black
+		cell.checkButton.tag = indexPath.row
+		cell.starButton.tag = indexPath.row
+
+		cell.checkButton.addTarget(self, action: #selector(tapCheckButton(sender:)), for: .touchUpInside)
+		cell.starButton.addTarget(self, action: #selector(tapstarButton(sender:)), for: .touchUpInside)
 		return cell
 	}
 
@@ -54,6 +59,16 @@ class Case3TableViewController: UITableViewController {
 	@IBAction func tapAddButton(_ sender: UIButton) {
 		shopping.append(ShoppingModel(isChecked: false, text: textField.text!, isStared: false))
 		tableView.reloadData()
+	}
+
+	@objc func tapCheckButton(sender: UIButton) {
+		shopping[sender.tag].isChecked.toggle()
+		tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .none)
+	}
+
+	@objc func tapstarButton(sender: UIButton) {
+		shopping[sender.tag].isStared.toggle()
+		tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .none)
 	}
 
 }
