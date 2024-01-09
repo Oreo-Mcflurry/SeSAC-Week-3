@@ -21,6 +21,10 @@
 		0B8CF9002B4D68E000460ED6 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF8FF2B4D68E000460ED6 /* CityInfo.swift */; };
 		0B8CF9022B4D695B00460ED6 /* Daily11P1CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF9012B4D695B00460ED6 /* Daily11P1CollectionViewController.swift */; };
 		0B8CF9042B4D6A7D00460ED6 /* Daily11P1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF9032B4D6A7D00460ED6 /* Daily11P1CollectionViewCell.swift */; };
+		0B8CF9062B4D71AE00460ED6 /* Daily11P2CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF9052B4D71AE00460ED6 /* Daily11P2CollectionViewController.swift */; };
+		0B8CF9092B4D722600460ED6 /* DailyP2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF9072B4D722600460ED6 /* DailyP2CollectionViewCell.swift */; };
+		0B8CF90A2B4D722600460ED6 /* DailyP2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8CF9082B4D722600460ED6 /* DailyP2CollectionViewCell.xib */; };
+		0B8CF90C2B4D7BBD00460ED6 /* Daily11P3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF90B2B4D7BBD00460ED6 /* Daily11P3ViewController.swift */; };
 		0BEBF86E2B47B7B000AE88AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF86D2B47B7B000AE88AB /* AppDelegate.swift */; };
 		0BEBF8702B47B7B000AE88AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF86F2B47B7B000AE88AB /* SceneDelegate.swift */; };
 		0BEBF8722B47B7B000AE88AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEBF8712B47B7B000AE88AB /* ViewController.swift */; };
@@ -61,6 +65,10 @@
 		0B8CF8FF2B4D68E000460ED6 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		0B8CF9012B4D695B00460ED6 /* Daily11P1CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily11P1CollectionViewController.swift; sourceTree = "<group>"; };
 		0B8CF9032B4D6A7D00460ED6 /* Daily11P1CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily11P1CollectionViewCell.swift; sourceTree = "<group>"; };
+		0B8CF9052B4D71AE00460ED6 /* Daily11P2CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily11P2CollectionViewController.swift; sourceTree = "<group>"; };
+		0B8CF9072B4D722600460ED6 /* DailyP2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyP2CollectionViewCell.swift; sourceTree = "<group>"; };
+		0B8CF9082B4D722600460ED6 /* DailyP2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyP2CollectionViewCell.xib; sourceTree = "<group>"; };
+		0B8CF90B2B4D7BBD00460ED6 /* Daily11P3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily11P3ViewController.swift; sourceTree = "<group>"; };
 		0BEBF86A2B47B7B000AE88AB /* SeSAC Week 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSAC Week 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEBF86D2B47B7B000AE88AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEBF86F2B47B7B000AE88AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +169,9 @@
 		0B8CF8FD2B4D688800460ED6 /* 2 */ = {
 			isa = PBXGroup;
 			children = (
+				0B8CF9052B4D71AE00460ED6 /* Daily11P2CollectionViewController.swift */,
+				0B8CF9072B4D722600460ED6 /* DailyP2CollectionViewCell.swift */,
+				0B8CF9082B4D722600460ED6 /* DailyP2CollectionViewCell.xib */,
 			);
 			path = 2;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 		0B8CF8FE2B4D688B00460ED6 /* 3 */ = {
 			isa = PBXGroup;
 			children = (
+				0B8CF90B2B4D7BBD00460ED6 /* Daily11P3ViewController.swift */,
 			);
 			path = 3;
 			sourceTree = "<group>";
@@ -386,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B8CF90A2B4D722600460ED6 /* DailyP2CollectionViewCell.xib in Resources */,
 				0BEBF87A2B47B7B100AE88AB /* LaunchScreen.storyboard in Resources */,
 				0B8CF8F92B4D101D00460ED6 /* P1CollectionViewCell.xib in Resources */,
 				0BEBF8772B47B7B100AE88AB /* Assets.xcassets in Resources */,
@@ -425,13 +438,16 @@
 				0BEBF86E2B47B7B000AE88AB /* AppDelegate.swift in Sources */,
 				0B8CF8E02B4C17B200460ED6 /* TravelSwiftUI.swift in Sources */,
 				0BEBF8702B47B7B000AE88AB /* SceneDelegate.swift in Sources */,
+				0B8CF9092B4D722600460ED6 /* DailyP2CollectionViewCell.swift in Sources */,
 				0B8CF9002B4D68E000460ED6 /* CityInfo.swift in Sources */,
 				0BEBF8952B493DF700AE88AB /* Case2TableViewController.swift in Sources */,
 				0BEBF8922B49375200AE88AB /* Case1SwiftUI.swift in Sources */,
+				0B8CF90C2B4D7BBD00460ED6 /* Daily11P3ViewController.swift in Sources */,
 				0B8CF8F82B4D101D00460ED6 /* P1CollectionViewCell.swift in Sources */,
 				0BEBF8A82B4AD6A500AE88AB /* P1TableViewController.swift in Sources */,
 				0BEBF89A2B4AB4F900AE88AB /* Case3TableViewController.swift in Sources */,
 				0B8CF8F32B4D0CDC00460ED6 /* P1CollectionViewController.swift in Sources */,
+				0B8CF9062B4D71AE00460ED6 /* Daily11P2CollectionViewController.swift in Sources */,
 				0BEBF8AC2B4AD8D500AE88AB /* P2TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

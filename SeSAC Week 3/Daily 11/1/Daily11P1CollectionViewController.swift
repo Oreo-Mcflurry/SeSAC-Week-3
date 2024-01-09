@@ -9,6 +9,12 @@ import UIKit
 
 private let reuseIdentifier = "Daily11P1Cell"
 
+enum Daily11CellName: String {
+	case Daily11P1Cell
+	case Daily11P2Cell
+	case Daily11P3Cell
+}
+
 class Daily11P1CollectionViewController: UICollectionViewController {
 	let citys = CityInfo().city
 
@@ -34,15 +40,15 @@ class Daily11P1CollectionViewController: UICollectionViewController {
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! Daily11P1CollectionViewCell
 
-		cell.imageView.kf.setImage(with: URL(string: citys[indexPath.row].city_image)!)
+		cell.imageView.kf.setImage(with: URL(string: citys[indexPath.item].city_image)!)
 		cell.imageView.contentMode = .scaleAspectFill
 		cell.imageView.layer.cornerRadius = cell.imageView.frame.width/2
 		
-		cell.titleLabel.text = "\(citys[indexPath.row].city_name) | \(citys[indexPath.row].city_english_name)"
+		cell.titleLabel.text = "\(citys[indexPath.item].city_name) | \(citys[indexPath.item].city_english_name)"
 		cell.titleLabel.font = .boldSystemFont(ofSize: 18)
 		cell.titleLabel.textAlignment = .center
 
-		cell.subTitleLabel.text = citys[indexPath.row].city_explain
+		cell.subTitleLabel.text = citys[indexPath.item].city_explain
 		cell.subTitleLabel.font = .systemFont(ofSize: 15)
 		cell.subTitleLabel.textAlignment = .center
 		cell.subTitleLabel.textColor = .systemGray3
