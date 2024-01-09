@@ -151,11 +151,11 @@
 		0B8CF8FA2B4D687000460ED6 /* Daily 11 */ = {
 			isa = PBXGroup;
 			children = (
+				0B8CF90D2B4D857200460ED6 /* Daily11SwiftUI.swift */,
 				0B8CF8FF2B4D68E000460ED6 /* CityInfo.swift */,
 				0B8CF8FE2B4D688B00460ED6 /* 3 */,
 				0B8CF8FD2B4D688800460ED6 /* 2 */,
 				0B8CF8FC2B4D688600460ED6 /* 1 */,
-				0B8CF90D2B4D857200460ED6 /* Daily11SwiftUI.swift */,
 			);
 			path = "Daily 11";
 			sourceTree = "<group>";

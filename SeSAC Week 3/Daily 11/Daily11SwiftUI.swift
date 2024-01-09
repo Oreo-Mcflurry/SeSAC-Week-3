@@ -73,12 +73,12 @@ struct CityCell: View {
 			Text("\(data.city_name) | \(data.city_english_name)")
 				.bold()
 
-			Text("\(data.city_explain)\n")
+			Text("\(data.city_explain)\n\n")
 				.font(.footnote)
 				.foregroundStyle(.gray)
 				.opacity(0.7)
 				.multilineTextAlignment(.center)
-				.lineLimit(2)
+				.lineLimit(3)
 		}
 	}
 }
