@@ -60,12 +60,12 @@ class TravelTableViewController: UITableViewController {
 	}
 }
 
-extension TravelTableViewController {
+extension UITableViewController {
 	func formatDate(_ dateString: String) -> String {
 		let formatter = DateFormatter()
 		let date = formatter.date(from: dateString) ?? Date()
 		formatter.dateFormat = "yy년 MM월 dd일"
-		formatter.timeZone = TimeZone(identifier: TimeZone.current.identifier)!
+//		formatter.timeZone = TimeZone(identifier: TimeZone.current.identifier)!
 
 		return formatter.string(from: date)
 	}
