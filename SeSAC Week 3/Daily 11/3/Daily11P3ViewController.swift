@@ -59,5 +59,5 @@ class Daily11P3ViewController: UIViewController, UICollectionViewDelegate, UICol
 enum SegementSelect: String, CaseIterable {
 	case 모두
 	case 국내
-	case 헤외
+	case 해외
 }
