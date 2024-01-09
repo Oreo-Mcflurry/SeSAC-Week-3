@@ -27,6 +27,12 @@ class Daily11P3ViewController: UIViewController, UICollectionViewDelegate, UICol
 		layout.minimumLineSpacing = 16
 		layout.minimumInteritemSpacing = 16
 		cityCollectionView.collectionViewLayout = layout
+
+		citySegmentedControl.removeAllSegments()
+		for (index, item) in SegementSelect.allCases.enumerated() {
+			citySegmentedControl.insertSegment(withTitle: item.rawValue, at: index, animated: true)
+		}
+		citySegmentedControl.selectedSegmentIndex = 0
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -39,4 +45,19 @@ class Daily11P3ViewController: UIViewController, UICollectionViewDelegate, UICol
 		cell.designCell(data: citys[indexPath.item])
 		return cell
 	}
+	@IBAction func changeSegmentValue(_ sender: UISegmentedControl) {
+		switch sender.selectedSegmentIndex {
+		case 0: citys = CityInfo().city
+		case 1: citys = CityInfo().city.filter({ $0.domestic_travel })
+		case 2: citys = CityInfo().city.filter({ !$0.domestic_travel })
+		default: print("이게 나올수가")
+		}
+		cityCollectionView.reloadData()
+	}
+}
+
+enum SegementSelect: String, CaseIterable {
+	case 모두
+	case 국내
+	case 헤외
 }

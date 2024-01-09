@@ -1412,6 +1412,9 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeSegmentValue:" destination="1Gm-Md-ta9" eventType="valueChanged" id="mtT-Qb-z0d"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="diK-be-pdT">
                                 <rect key="frame" x="0.0" y="134" width="393" height="718"/>
