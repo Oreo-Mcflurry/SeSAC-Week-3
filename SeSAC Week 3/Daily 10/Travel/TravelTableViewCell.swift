@@ -16,8 +16,18 @@ class TravelTableViewCell: UITableViewCell {
 	
 	override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+		titleImage.contentMode = .scaleAspectFill
+		titleImage.layer.cornerRadius = 10
+
+		titleLabel.font = .boldSystemFont(ofSize: 25)
+		titleLabel.numberOfLines = 2
+
+		subTitleLabel.textColor = .lightGray
+		subTitleLabel.font = .systemFont(ofSize: 15)
+
+		dateLabel.textColor = .lightGray
+		dateLabel.font = .systemFont(ofSize: 13)
+	}
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -15,7 +15,6 @@ class DailyP2CollectionViewCell: UICollectionViewCell {
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		imageView.layer.cornerRadius = (imageView.frame.width-32)/2
 		imageView.contentMode = .scaleToFill
 
 		titleLabel.textAlignment = .center
@@ -26,6 +25,10 @@ class DailyP2CollectionViewCell: UICollectionViewCell {
 		subTitleLabel.textColor = .systemGray3
 		subTitleLabel.numberOfLines = 0
     }
+
+	override func draw(_ rect: CGRect) {
+		imageView.layer.cornerRadius = (imageView.frame.width)/2
+	}
 
 	func designCell(data: City) {
 		imageView.kf.setImage(with: URL(string: data.city_image)!)

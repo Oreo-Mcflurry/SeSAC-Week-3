@@ -14,25 +14,10 @@ class Daily11P3ViewController: UIViewController, UICollectionViewDelegate, UICol
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// 2번째를 재사용.... 했습니다...
 		cityCollectionView.register(UINib(nibName: "DailyP2CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: Daily11CellName.Daily11P2Cell.rawValue)
-
-		// MARK: - 다해놓고 까먹지 말기
-		cityCollectionView.delegate = self
-		cityCollectionView.dataSource = self
-
-		let layout = UICollectionViewFlowLayout()
-		layout.itemSize = CGSize(width: (UIScreen.main.bounds.width - 16*3)/2, height: 300)
-		layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-		layout.minimumLineSpacing = 16
-		layout.minimumInteritemSpacing = 16
-		cityCollectionView.collectionViewLayout = layout
-
-		citySegmentedControl.removeAllSegments()
-		for (index, item) in SegementSelect.allCases.enumerated() {
-			citySegmentedControl.insertSegment(withTitle: item.rawValue, at: index, animated: true)
-		}
-		citySegmentedControl.selectedSegmentIndex = 0
+		setCellLayOut(16)
+		setSegementedControl()
+		setDelegate()
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -60,4 +45,37 @@ enum SegementSelect: String, CaseIterable {
 	case 모두
 	case 국내
 	case 해외
+}
+
+@objc protocol SetTableViewController {
+	func setCellLayOut(_ padding: CGFloat)
+	func setDelegate()
+	@objc optional func setBackgrondColor()
+	@objc optional func setSegementedControl()
+}
+
+extension Daily11P3ViewController: SetTableViewController {
+
+	func setDelegate() {
+		// MARK: - 다해놓고 까먹지 말기
+		cityCollectionView.delegate = self
+		cityCollectionView.dataSource = self
+	}
+
+	func setCellLayOut(_ padding: CGFloat) {
+		let layout = UICollectionViewFlowLayout()
+		layout.itemSize = CGSize(width: (UIScreen.main.bounds.width - padding*3)/2, height: 300)
+		layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+		layout.minimumLineSpacing = padding
+		layout.minimumInteritemSpacing = padding
+		cityCollectionView.collectionViewLayout = layout
+	}
+	
+	func setSegementedControl() {
+		citySegmentedControl.removeAllSegments()
+		for (index, item) in SegementSelect.allCases.enumerated() {
+			citySegmentedControl.insertSegment(withTitle: item.rawValue, at: index, animated: true)
+		}
+		citySegmentedControl.selectedSegmentIndex = 0
+	}
 }

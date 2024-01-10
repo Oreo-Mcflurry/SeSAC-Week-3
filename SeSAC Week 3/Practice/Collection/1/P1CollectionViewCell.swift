@@ -9,13 +9,13 @@ import UIKit
 
 class P1CollectionViewCell: UICollectionViewCell {
 
-
 	@IBOutlet var imageCell: UIImageView!
 	@IBOutlet var labelCell: UILabel!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		
+		labelCell.SetLabel()
+		imageCell.setCornerRadius()
 	}
 	
 }

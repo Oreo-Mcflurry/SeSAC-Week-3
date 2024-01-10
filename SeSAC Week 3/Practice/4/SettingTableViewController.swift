@@ -45,9 +45,24 @@ class SettingTableViewController: UITableViewController, UICollectionViewDelegat
 		return cell
 	}
 
+	override func viewWillAppear(_ animated: Bool) {
+		print("1 viewWillAppear")
+	}
+
+	override func viewDidAppear(_ animated: Bool) {
+		print("1 viewDidAppear")
+	}
+
+	override func viewDidDisappear(_ animated: Bool) {
+		print("1 viewDidDisappear")
+	}
+
+	override func viewWillDisappear(_ animated: Bool) {
+		print(" 1 viewWilldisappar")
+	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		print("1 viewDidLoad")
 		// MARK: - 3번
 		foodCollectionView.register(UINib(nibName: "P1CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "P1CollectionViewCell")
 
@@ -90,6 +105,10 @@ class SettingTableViewController: UITableViewController, UICollectionViewDelegat
 		cell.settingLabel.numberOfLines = 0
 		return cell
 
+	}
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		showAlert(withTitel: "dfsdf", withMessage: "adf")
 	}
 }
 

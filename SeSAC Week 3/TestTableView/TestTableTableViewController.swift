@@ -13,7 +13,24 @@ class TestTableTableViewController: UITableViewController {
 		Movie(title: "괴물", isChecked: false),
 		Movie(title: "안녕하세요", isChecked: false)
 	]
+	override func viewWillAppear(_ animated: Bool) {
+		print("movie viewWillAppear")
+		
+	}
+
+	override func viewDidAppear(_ animated: Bool) {
+		print("movie viewDidAppear")
+	}
+
+	override func viewDidDisappear(_ animated: Bool) {
+		print("movie viewDidDisappear")
+	}
+
+	override func viewWillDisappear(_ animated: Bool) {
+		print("movie viewWilldisappar")
+	}
 	override func viewDidLoad() {
+		print("movie ViewDidLoad")
 		super.viewDidLoad()
 		tableView.rowHeight = 80
 	}
@@ -24,7 +41,6 @@ class TestTableTableViewController: UITableViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		print(indexPath.row)
 		return 100
 	}
 

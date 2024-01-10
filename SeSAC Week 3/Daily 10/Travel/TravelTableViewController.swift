@@ -37,21 +37,9 @@ class TravelTableViewController: UITableViewController {
 		guard let cell else { return UITableViewCell() }
 		
 		cell.titleImage.kf.setImage(with: URL(string: magazines[indexPath.row].photo_image)!)
-		cell.titleImage.contentMode = .scaleAspectFill
-		cell.titleImage.layer.cornerRadius = 10
-
 		cell.titleLabel.text = magazines[indexPath.row].title
-		cell.titleLabel.font = .boldSystemFont(ofSize: 25)
-		cell.titleLabel.numberOfLines = 2
-
 		cell.subTitleLabel.text = magazines[indexPath.row].subtitle
-		cell.subTitleLabel.textColor = .lightGray
-		cell.subTitleLabel.font = .systemFont(ofSize: 15)
-
 		cell.dateLabel.text = formatDate(magazines[indexPath.row].date)
-		cell.dateLabel.textColor = .lightGray
-		cell.dateLabel.font = .systemFont(ofSize: 13)
-
 		return cell
 	}
 
@@ -65,8 +53,7 @@ extension UITableViewController {
 		let formatter = DateFormatter()
 		let date = formatter.date(from: dateString) ?? Date()
 		formatter.dateFormat = "yy년 MM월 dd일"
-//		formatter.timeZone = TimeZone(identifier: TimeZone.current.identifier)!
-
 		return formatter.string(from: date)
 	}
 }
+
