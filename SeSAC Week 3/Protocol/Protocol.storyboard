@@ -51,12 +51,50 @@
                     <view key="view" contentMode="scaleToFill" id="pyw-Jl-P5l">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0K-FJ-Scc">
+                                <rect key="frame" x="24" y="415.66666666666669" width="345" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GFv-yL-Xn2">
+                                <rect key="frame" x="24" y="409" width="345" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="endEdit:" destination="p8d-Ez-FMW" eventType="editingDidEndOnExit" id="4Ds-aZ-Jgb"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="t4u-YX-Zr5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="G0K-FJ-Scc" firstAttribute="height" secondItem="GFv-yL-Xn2" secondAttribute="height" multiplier="0.617647" id="5x1-VP-lsA"/>
+                            <constraint firstItem="t4u-YX-Zr5" firstAttribute="trailing" secondItem="GFv-yL-Xn2" secondAttribute="trailing" constant="24" id="9nk-Qa-S87"/>
+                            <constraint firstItem="GFv-yL-Xn2" firstAttribute="centerY" secondItem="pyw-Jl-P5l" secondAttribute="centerY" id="GSK-7A-emg"/>
+                            <constraint firstItem="G0K-FJ-Scc" firstAttribute="centerY" secondItem="GFv-yL-Xn2" secondAttribute="centerY" id="b70-4o-BcB"/>
+                            <constraint firstItem="GFv-yL-Xn2" firstAttribute="leading" secondItem="t4u-YX-Zr5" secondAttribute="leading" constant="24" id="c8h-lU-rgX"/>
+                            <constraint firstItem="t4u-YX-Zr5" firstAttribute="trailing" secondItem="G0K-FJ-Scc" secondAttribute="trailing" constant="24" id="edL-pt-U1S"/>
+                            <constraint firstItem="G0K-FJ-Scc" firstAttribute="leading" secondItem="t4u-YX-Zr5" secondAttribute="leading" constant="24" id="sAi-mk-CsU"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Dlf-V2-o1J" appends="YES" id="N53-3f-WLA"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="uMN-AW-FLu"/>
+                    <connections>
+                        <outlet property="numberTextField" destination="GFv-yL-Xn2" id="l1r-Ja-VpI"/>
+                        <outlet property="resultLabel" destination="G0K-FJ-Scc" id="MEh-hv-8ar"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BL6-7g-UE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Dlf-V2-o1J">
+                    <connections>
+                        <action selector="endEdit:" destination="p8d-Ez-FMW" id="d1Q-eF-9RS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2042" y="-323"/>
         </scene>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="Y6W-OH-hqX" customClass="DetailViewController" customModule="SeSAC_Week_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-ld-B2m">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Zr-ld-B2m" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="02T-FG-19l"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Zr-ld-B2m" secondAttribute="trailing" id="7Bp-QB-l7X"/>
+                            <constraint firstItem="9Zr-ld-B2m" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JpQ-5P-eTv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9Zr-ld-B2m" secondAttribute="bottom" id="bWF-dY-dQQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailTableVIew" destination="9Zr-ld-B2m" id="sWb-u2-FIm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="-34"/>
+        </scene>
+        <!--Ads Select View Controller-->
+        <scene sceneID="6uv-u1-lGE">
+            <objects>
+                <viewController storyboardIdentifier="AdsSelectView" id="c3B-bB-SYt" customClass="AdsSelectViewController" customModule="SeSAC_Week_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v0J-V9-910">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkn-Lo-Pia">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JoX-JC-u8m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nkn-Lo-Pia" firstAttribute="top" secondItem="JoX-JC-u8m" secondAttribute="top" id="2pC-XP-g7S"/>
+                            <constraint firstItem="JoX-JC-u8m" firstAttribute="bottom" secondItem="nkn-Lo-Pia" secondAttribute="bottom" id="FEL-RE-gRA"/>
+                            <constraint firstItem="JoX-JC-u8m" firstAttribute="trailing" secondItem="nkn-Lo-Pia" secondAttribute="trailing" id="Lct-qE-d5Z"/>
+                            <constraint firstItem="nkn-Lo-Pia" firstAttribute="leading" secondItem="JoX-JC-u8m" secondAttribute="leading" id="ddP-3O-zzt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="nkn-Lo-Pia" id="DGr-5I-VWj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSc-TU-j0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="-35"/>
+        </scene>
+        <!--Detail Select View Controller-->
+        <scene sceneID="9ZZ-qy-7Ig">
+            <objects>
+                <viewController storyboardIdentifier="DetailSelectView" id="oSV-IM-ReI" customClass="DetailSelectViewController" customModule="SeSAC_Week_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hex-Ov-P7y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상세뷰인듯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob7-F9-g7v">
+                                <rect key="frame" x="97" y="411" width="199" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Reb-Sg-Qhs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ob7-F9-g7v" firstAttribute="centerX" secondItem="Reb-Sg-Qhs" secondAttribute="centerX" id="aoB-ya-6VQ"/>
+                            <constraint firstItem="Ob7-F9-g7v" firstAttribute="centerY" secondItem="Reb-Sg-Qhs" secondAttribute="centerY" id="ie2-Zf-wD2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMj-ZK-5bz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="-35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -30,6 +30,14 @@ class Daily11P3ViewController: UIViewController, UICollectionViewDelegate, UICol
 		cell.designCell(data: citys[indexPath.item])
 		return cell
 	}
+
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let sb = UIStoryboard(name: "DetailView", bundle: nil)
+		let vc = sb.instantiateViewController(withIdentifier: "DetailView") as! DetailViewController
+		navigationController?.pushViewController(vc, animated: true)
+		collectionView.reloadItems(at: [indexPath])
+	}
+
 	@IBAction func changeSegmentValue(_ sender: UISegmentedControl) {
 		switch sender.selectedSegmentIndex {
 		case 0: citys = CityInfo().city
