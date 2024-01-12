@@ -33,6 +33,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
 		} else {
 			let adCell = tableView.dequeueReusableCell(withIdentifier: AdsTableViewCell.identifier, for: indexPath) as! AdsTableViewCell
 			adCell.setadsString(datas[indexPath.row].title)
+			adCell.separatorInset = UIEdgeInsets(top: -10, left: 30, bottom: -10, right: 30)
 			return adCell
 		}
 	}
