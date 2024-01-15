@@ -10,6 +10,8 @@
 		0B5FF9902B55136F00A9044D /* TravelWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5FF98F2B55136F00A9044D /* TravelWebViewController.swift */; };
 		0B5FF9922B55137B00A9044D /* TravelWebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5FF9912B55137B00A9044D /* TravelWebViewController.storyboard */; };
 		0B5FF9962B55141400A9044D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5FF9952B55141400A9044D /* UIViewController+Extension.swift */; };
+		0B5FF99A2B5563EA00A9044D /* MoviePinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5FF9992B5563EA00A9044D /* MoviePinViewController.swift */; };
+		0B5FF99C2B5563F400A9044D /* MoviePinViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5FF99B2B5563F400A9044D /* MoviePinViewController.storyboard */; };
 		0B8CF8D52B4BD22800460ED6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0B8CF8D42B4BD22800460ED6 /* Kingfisher */; };
 		0B8CF8D92B4C0D5700460ED6 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF8D82B4C0D5700460ED6 /* TravelTableViewController.swift */; };
 		0B8CF8DB2B4C0D9E00460ED6 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8CF8DA2B4C0D9E00460ED6 /* MagazineInfo.swift */; };
@@ -77,6 +79,8 @@
 		0B5FF98F2B55136F00A9044D /* TravelWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelWebViewController.swift; sourceTree = "<group>"; };
 		0B5FF9912B55137B00A9044D /* TravelWebViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelWebViewController.storyboard; sourceTree = "<group>"; };
 		0B5FF9952B55141400A9044D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		0B5FF9992B5563EA00A9044D /* MoviePinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePinViewController.swift; sourceTree = "<group>"; };
+		0B5FF99B2B5563F400A9044D /* MoviePinViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoviePinViewController.storyboard; sourceTree = "<group>"; };
 		0B8CF8D82B4C0D5700460ED6 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		0B8CF8DA2B4C0D9E00460ED6 /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		0B8CF8DD2B4C0F0C00460ED6 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 		0B5FF98C2B55132E00A9044D /* Daily 15 */ = {
 			isa = PBXGroup;
 			children = (
+				0B5FF9982B5563D700A9044D /* Movie */,
 				0B5FF9972B55590800A9044D /* 11-plus */,
 				0B5FF9942B5513B900A9044D /* Extension */,
 				0B5FF98D2B55133B00A9044D /* 10-plus */,
@@ -193,6 +198,15 @@
 			children = (
 			);
 			path = "11-plus";
+			sourceTree = "<group>";
+		};
+		0B5FF9982B5563D700A9044D /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				0B5FF9992B5563EA00A9044D /* MoviePinViewController.swift */,
+				0B5FF99B2B5563F400A9044D /* MoviePinViewController.storyboard */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		0B8CF8D62B4C0D3800460ED6 /* Daily 10 */ = {
@@ -550,6 +564,7 @@
 				0B8CF8F92B4D101D00460ED6 /* P1CollectionViewCell.xib in Resources */,
 				0BF350022B50114000C131FA /* AdsTableViewCell.xib in Resources */,
 				0BEBF8772B47B7B100AE88AB /* Assets.xcassets in Resources */,
+				0B5FF99C2B5563F400A9044D /* MoviePinViewController.storyboard in Resources */,
 				0B8CF8EA2B4CDB4500460ED6 /* SettingTableViewCell.xib in Resources */,
 				0BF34FFE2B500DE100C131FA /* DetailTableViewCell.xib in Resources */,
 				0B8CF91C2B4E5F4900460ED6 /* Protocol.storyboard in Resources */,
@@ -615,6 +630,7 @@
 				0BEBF8A82B4AD6A500AE88AB /* P1TableViewController.swift in Sources */,
 				0BEBF89A2B4AB4F900AE88AB /* Case3TableViewController.swift in Sources */,
 				0B8CF8F32B4D0CDC00460ED6 /* P1CollectionViewController.swift in Sources */,
+				0B5FF99A2B5563EA00A9044D /* MoviePinViewController.swift in Sources */,
 				0B8CF9062B4D71AE00460ED6 /* Daily11P2CollectionViewController.swift in Sources */,
 				0BEBF8AC2B4AD8D500AE88AB /* P2TableViewCell.swift in Sources */,
 			);
