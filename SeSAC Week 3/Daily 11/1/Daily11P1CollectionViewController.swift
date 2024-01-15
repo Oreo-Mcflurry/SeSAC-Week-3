@@ -16,7 +16,7 @@ enum Daily11CellName: String {
 }
 
 class Daily11P1CollectionViewController: UICollectionViewController {
-	let citys = CityInfo().city
+	let citys = CityInfo.city
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

@@ -29,10 +29,19 @@ class DailyP2CollectionViewCell: UICollectionViewCell {
 	override func draw(_ rect: CGRect) {
 		imageView.layer.cornerRadius = (imageView.frame.width)/2
 	}
+// 부
+	func designCell(data: City, searchText: String) {
+		var attributedString = AttributedString(data.city_name)
+		let range = attributedString.range(of: searchText)
+		if let range {
+			attributedString.foregroundColor = .red
+			titleLabel.text = "\(attributedString) | \(data.city_english_name)"
+		} else {
+			titleLabel.text = "\(data.city_name) | \(data.city_english_name)"
+		}
 
-	func designCell(data: City) {
 		imageView.kf.setImage(with: URL(string: data.city_image)!)
-		titleLabel.text = "\(data.city_name) | \(data.city_english_name)"
+
 		subTitleLabel.text = data.city_explain
 	}
 

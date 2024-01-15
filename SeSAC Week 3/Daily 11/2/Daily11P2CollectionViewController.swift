@@ -10,7 +10,7 @@ import UIKit
 private let reuseIdentifier = Daily11CellName.Daily11P2Cell.rawValue
 
 class Daily11P2CollectionViewController: UICollectionViewController {
-	let citys = CityInfo().city
+	let citys = CityInfo.city
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		collectionView.register(UINib(nibName: "DailyP2CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
@@ -33,7 +33,7 @@ class Daily11P2CollectionViewController: UICollectionViewController {
 
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DailyP2CollectionViewCell
-		cell.designCell(data: citys[indexPath.item])
+		cell.designCell(data: citys[indexPath.item], searchText: "")
 		return cell
 	}
 }

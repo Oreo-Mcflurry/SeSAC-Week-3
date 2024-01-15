@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vAO-WV-LWm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bb3-OQ-COc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -1378,7 +1378,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k8m-Lu-PyF">
-                                <rect key="frame" x="16" y="103" width="361" height="32"/>
+                                <rect key="frame" x="16" y="159" width="361" height="32"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -1388,7 +1388,7 @@
                                 </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="diK-be-pdT">
-                                <rect key="frame" x="0.0" y="134" width="393" height="718"/>
+                                <rect key="frame" x="0.0" y="190" width="393" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ilq-re-DYZ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -1407,28 +1407,39 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-Mq-FHJ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1Gm-Md-ta9" id="pkH-n9-i2I"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="23y-Qe-QaK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="23y-Qe-QaK" firstAttribute="trailing" secondItem="k8m-Lu-PyF" secondAttribute="trailing" constant="16" id="8Fi-J8-x4e"/>
                             <constraint firstItem="k8m-Lu-PyF" firstAttribute="leading" secondItem="23y-Qe-QaK" secondAttribute="leading" constant="16" id="9MB-wP-V0Q"/>
+                            <constraint firstItem="C2q-Mq-FHJ" firstAttribute="leading" secondItem="23y-Qe-QaK" secondAttribute="leading" id="Av5-4I-aT6"/>
                             <constraint firstItem="diK-be-pdT" firstAttribute="leading" secondItem="23y-Qe-QaK" secondAttribute="leading" id="OEw-zJ-7DG"/>
-                            <constraint firstItem="k8m-Lu-PyF" firstAttribute="top" secondItem="23y-Qe-QaK" secondAttribute="top" id="Tpd-eF-i8B"/>
-                            <constraint firstItem="diK-be-pdT" firstAttribute="top" secondItem="k8m-Lu-PyF" secondAttribute="bottom" id="VRz-lF-aKg"/>
+                            <constraint firstItem="C2q-Mq-FHJ" firstAttribute="top" secondItem="23y-Qe-QaK" secondAttribute="top" id="QN6-3s-PuQ"/>
+                            <constraint firstItem="diK-be-pdT" firstAttribute="top" secondItem="k8m-Lu-PyF" secondAttribute="bottom" id="b17-Jo-CZl"/>
                             <constraint firstItem="23y-Qe-QaK" firstAttribute="trailing" secondItem="diK-be-pdT" secondAttribute="trailing" id="b2n-Xn-0sh"/>
+                            <constraint firstItem="C2q-Mq-FHJ" firstAttribute="trailing" secondItem="23y-Qe-QaK" secondAttribute="trailing" id="fl5-yN-cYA"/>
                             <constraint firstAttribute="bottom" secondItem="diK-be-pdT" secondAttribute="bottom" id="taz-Qg-DE9"/>
+                            <constraint firstItem="k8m-Lu-PyF" firstAttribute="top" secondItem="C2q-Mq-FHJ" secondAttribute="bottom" id="teQ-JQ-7yB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="인기도시 3번" id="CDi-Km-YyU"/>
                     <connections>
                         <outlet property="cityCollectionView" destination="diK-be-pdT" id="RRb-Ze-Seu"/>
                         <outlet property="citySegmentedControl" destination="k8m-Lu-PyF" id="Zui-Ck-TW0"/>
+                        <outlet property="searchBar" destination="C2q-Mq-FHJ" id="TCp-6e-0tw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgf-nk-MQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11076" y="546"/>
+            <point key="canvasLocation" x="11075.572519083969" y="545.77464788732402"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rtm-Kw-sgH">
@@ -1446,7 +1457,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQZ-sC-A1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9976" y="546"/>
+            <point key="canvasLocation" x="10126" y="546"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4KI-PO-Gy7">
