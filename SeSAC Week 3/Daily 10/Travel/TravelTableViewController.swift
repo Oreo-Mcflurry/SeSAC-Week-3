@@ -46,6 +46,16 @@ class TravelTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 500
 	}
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let sb = UIStoryboard(name: TravelWebViewController.identifier, bundle: nil)
+
+		let vc = sb.instantiateViewController(withIdentifier: TravelWebViewController.identifier) as! TravelWebViewController
+		vc.url = magazines[indexPath.row].link
+
+		navigationController?.pushViewController(vc, animated: true)
+
+	}
 }
 
 extension UITableViewController {

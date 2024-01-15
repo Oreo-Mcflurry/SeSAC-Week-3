@@ -36,7 +36,5 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		imageView.kf.setImage(with: url,placeholder: UIImage(systemName: "star"))
 	}
-
-
 }
 
