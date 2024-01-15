@@ -61,19 +61,17 @@ class MoviePinViewController: UIViewController {
 		setFilterButton()
 		setupMapView()
 		createAnnotaion()
-		let initialRegion = MKCoordinateRegion(
-			 center: CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780),
-			 span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.4)
-		)
-
-		mapView.setRegion(initialRegion, animated: true)
-
 	}
 }
 
 extension MoviePinViewController: MKMapViewDelegate {
 	func setupMapView() {
 		mapView.delegate = self
+		let seoulInitRegion = MKCoordinateRegion(
+			 center: CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780),
+			 span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.4))
+
+		mapView.setRegion(seoulInitRegion, animated: true)
 	}
 
 	func createAnnotaion() {
